@@ -2,10 +2,11 @@
   "name": "vite-project",
   "private": true,
   "version": "0.0.0",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+  "scripts": {                                                 
+    "dev": "cross-env NODE_ENV=development vite",  
+    "build": "cross-env NODE_ENV=production vite build",
+    "preview": "vite preview",
+    "deploy-gh": "GH=1 bash deploy-gh.sh"
   },
   "dependencies": {
     "axios": "0.26.1",
